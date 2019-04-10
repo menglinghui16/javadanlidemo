@@ -18,4 +18,7 @@ public class SingletonDCL {
         }
         return singletonDCL;
     }
+    public void getMessage(){
+        System.out.println("这是双重校验锁的多线程安全单例模式");
+    }
 }
