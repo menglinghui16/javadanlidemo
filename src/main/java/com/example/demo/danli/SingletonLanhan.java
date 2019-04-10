@@ -6,13 +6,11 @@ package com.example.demo.danli;
 public class SingletonLanhan {
     private void SingletonLanhan(){}
     private static SingletonLanhan singletonLanhan = null;
-    public static SingletonLanhan getInstance(){
+    public static synchronized SingletonLanhan getInstance(){
         if(singletonLanhan == null){
             singletonLanhan = new SingletonLanhan();
-            return singletonLanhan;
-        }else{
-            return singletonLanhan;
         }
+        return singletonLanhan;
     }
     public void getMessage(){
         System.out.println("这是懒汉式单例模式");
